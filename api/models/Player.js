@@ -4,6 +4,7 @@
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
+const bcrypt = require('bcrypt-nodejs');
 
 module.exports = {
 
@@ -61,7 +62,20 @@ module.exports = {
     team: {
       model: 'Team'
     }
+
   },
+  customToJSON: function() {
+    return _.omit(this, ['Passwords'])
+ },
+ beforeCreate: function(user, cb){
+   bcrypt.genSalt(10, function(err, salt){
+     bcrypt.hash(user.Passwords, salt, null, function(err, hash){
+       if(err) return cb(err);
+       user.Passwords = hash;
+       return cb();
+     });
+   });
+ }
 
 };
 
