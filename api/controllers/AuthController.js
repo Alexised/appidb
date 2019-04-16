@@ -4,7 +4,7 @@ login: function(req, res) {
     passport.authenticate('local', function(err, user, info){
       if((err) || (!user)) {
         return res.send({
-          message: info.message,
+          message: err.message,
           user
         });
       }
@@ -26,3 +26,5 @@ logout: function(req, res) {
     
   }
 };
+//edwina@hotmail.com
+//7896
