@@ -21,8 +21,8 @@ logout: function(req, res) {
     req.logout();
     
   },
-  registro: function(req, res){
-    var datos =req.param()
+  register: function(req, res){
+    var datos =req.allParams()
     
   }
 };
