@@ -19,6 +19,10 @@ req.logIn(user, function(err) {
   },
 logout: function(req, res) {
     req.logout();
-    res.redirect('/');
+    
+  },
+  registro: function(req, res){
+    var datos =req.param()
+    
   }
 };
