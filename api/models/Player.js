@@ -28,6 +28,7 @@ module.exports = {
       type:'string',
       columnType:'varchar(50)',
       required:true,
+      unique:true
     },
     Genre  :{
       type:'string',
@@ -79,3 +80,5 @@ module.exports = {
 
 };
 
+//edwina@hotmail.com
+//7896

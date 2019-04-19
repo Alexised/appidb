@@ -1,3 +1,4 @@
+require('dotenv').config({ path: './.env' });
 process.chdir(__dirname);
 var sails;
 var rc;

@@ -15,7 +15,8 @@ module.exports = {
       name: { 
         type: 'string',
         columnType:'varchar(30)',
-        required:true
+        required:true,
+        unique:true
        },
        logo: { 
         type: 'string',

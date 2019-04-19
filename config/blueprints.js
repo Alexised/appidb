@@ -1,4 +1,4 @@
-/**
+  /**
  * Blueprint API Configuration
  * (sails.config.blueprints)
  *

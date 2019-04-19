@@ -13,14 +13,12 @@ passport.use(new LocalStrategy({
   EmailField: 'Email',
   passportField: 'password'
 }, function(email, password, cb){
-Player.findOne({Email: email}, function(err, user){
-  console.log(`Resultado de consulta: ${email}, ${user}`)
+Player.findOne({Email: Email}, function(err, user){
     if(err) return cb(err);
     if(!user) return cb(null, false, {message: 'Username not found'});
 bcrypt.compare(password, user.password, function(err, res){
       if(!res) return cb(null, false, { message: 'Invalid Password' });
 let userDetails = {
-        email: user.email,
         Email: user.Email,
         id: user.id
       };

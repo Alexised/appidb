@@ -6,13 +6,20 @@
   "keywords": [],
   "dependencies": {
     "@sailshq/lodash": "^3.10.3",
+    "bcrypt": "^3.0.6",
     "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^7.0.0",
+    "flat": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.2.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "redis": "^2.8.0",
     "sails": "^1.1.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
+    "sails-mongo": "^1.0.1",
     "sails-mysql": "^1.0.1"
   },
   "devDependencies": {
